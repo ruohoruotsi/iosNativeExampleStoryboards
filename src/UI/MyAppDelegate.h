@@ -5,10 +5,24 @@
 
 #import "ofxiOSAppDelegate.h"
 
-@interface MyAppDelegate : ofxiOSAppDelegate {
+@class BeamMusicPlayerViewController;
+@class BeamMinimalExampleProvider;
+@class MMDrawerController;
+
+
+@interface MyAppDelegate : ofxiOSAppDelegate  <UITabBarControllerDelegate>
+{
     //
 }
 
-@property (nonatomic, retain) UINavigationController* navigationController;
+// @property (nonatomic, retain) UINavigationController* navigationController;
+
+@property (strong, nonatomic) MMDrawerController* drawerController;
+
+@property (strong, nonatomic) BeamMinimalExampleProvider *provider;
+@property (strong, nonatomic) UINavigationController *topNavViewController;
+
+@property (strong, nonatomic) BeamMusicPlayerViewController* beamAppVC;
+
 
 @end
