@@ -4,12 +4,15 @@
 //
 
 #import "MyAppDelegate.h"
-#import "MyAppViewController.h"
+
+#import "TriangleAppViewController.h"
+#import "TriangleApp.h"
 
 #import <DPMusicControllerStatic/BeamMusicPlayerViewController.h>
 #import <DPMusicControllerStatic/BeamMinimalExampleProvider.h>
 #import <DPMusicControllerStatic/MMDrawerController.h>
 #import <DPMusicControllerStatic/MMDrawerBarButtonItem.h>
+
 
 
 @implementation MyAppDelegate
@@ -81,18 +84,41 @@
     }
     
     
+    // Setup OF view controller
+
+    TriangleAppViewController *viewController;
+    viewController = [[[TriangleAppViewController alloc] initWithFrame:[[UIScreen mainScreen] bounds]
+                                                                   app:new TriangleApp()] autorelease];
     
-    MMDrawerController* drawerController = [[MMDrawerController alloc]
-                                            initWithCenterViewController:_topNavViewController
-                                            leftDrawerViewController:nil    // leftSideDrawerViewController
-                                            rightDrawerViewController:nil]; //rightSideDrawerViewController];
-    [drawerController setMaximumRightDrawerWidth:200.0];
-    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
-    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    _drawerController = [[MMDrawerController alloc]
+                         initWithCenterViewController:_topNavViewController
+                         leftDrawerViewController:nil                       // leftSideDrawerViewController
+                         rightDrawerViewController:viewController];         // rightSideDrawerViewController
+    
+    [_drawerController setMaximumRightDrawerWidth:self.window.bounds.size.width]; //200.0;
+
+    [_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModePanningNavigationBar]; // Pan Nav Bar for OPEN Gesture
+    [_drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeCustom]; // MMCloseDrawerGestureModePanningDrawerView
+
+    // [_drawerController setCenterHiddenInteractionMode:MMDrawerOpenCenterInteractionModeNavigationBarOnly];
+    
+    [_drawerController
+     setGestureShouldRecognizeTouchBlock:^BOOL(MMDrawerController *drawerController, UIGestureRecognizer *gesture, UITouch *touch) {
+         BOOL shouldRecognizeTouch = NO;
+         if(drawerController.openSide == MMDrawerSideRight && [gesture isKindOfClass:[UIPanGestureRecognizer class]]){
+             
+             UIView * customView = drawerController.rightDrawerViewController.view;
+             CGPoint location = [touch locationInView:customView];
+             printf("(%f, %f)\n", location.x, location.y);
+             
+             shouldRecognizeTouch = location.y  < 30.0 ? true : false;
+             // shouldRecognizeTouch = (CGRectContainsPoint(customView.bounds, location));
+         }
+         return shouldRecognizeTouch;
+     }];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setRootViewController:drawerController];
-    
+    [self.window setRootViewController:_drawerController];
     
     // Setup Right Button
     MMDrawerBarButtonItem * rightDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(rightDrawerButtonPress:)];
@@ -106,6 +132,54 @@
 - (void) dealloc {
     // self.navigationController = nil;
     [super dealloc];
+}
+
+
+#pragma mark - UITabBarController delegate
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    NSArray *titleArray = @[@"Albums", @"Artists", @"Songs", @"Queue", @"Now Playing", @"Beam"];
+    
+    if (viewController == [tabBarController.viewControllers objectAtIndex:0] ) {
+        
+        // DLog(@"Selected 0 \n");
+        _topNavViewController.navigationBar.topItem.title = [titleArray objectAtIndex:0];
+    }
+    else if (viewController == [tabBarController.viewControllers objectAtIndex:1] ) {
+        
+        // DLog(@"Selected 1 \n");
+        _topNavViewController.navigationBar.topItem.title = [titleArray objectAtIndex:1];
+    }
+    else if (viewController == [tabBarController.viewControllers objectAtIndex:2] ) {
+        
+        // DLog(@"Selected 2 \n");
+        _topNavViewController.navigationBar.topItem.title = [titleArray objectAtIndex:2];
+    }
+    else if (viewController == [tabBarController.viewControllers objectAtIndex:3] ) {
+        
+        // DLog(@"Selected 3 \n");
+        _topNavViewController.navigationBar.topItem.title = [titleArray objectAtIndex:3];
+    }
+    else if (viewController == [tabBarController.viewControllers objectAtIndex:4] ) {
+        
+        // DLog(@"Selected 4 \n");
+        _topNavViewController.navigationBar.topItem.title = [titleArray objectAtIndex:4];
+    }
+    else if (viewController == [tabBarController.viewControllers objectAtIndex:5] ) {
+        
+        // DLog(@"Selected 5 \n");
+        _topNavViewController.navigationBar.topItem.title = [titleArray objectAtIndex:5];
+    }
+    
+    return YES;
+}
+
+
+#pragma mark - MMDrawerController
+
+-(void)rightDrawerButtonPress:(id)sender {
+    [_drawerController toggleDrawerSide:MMDrawerSideRight animated:YES completion:nil];
 }
 
 @end

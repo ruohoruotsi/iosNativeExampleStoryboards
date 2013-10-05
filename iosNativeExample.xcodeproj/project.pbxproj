@@ -10,11 +10,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		1e06a14544b806ba3bd9b07d /* TriangleApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03541b492cf4ac16398eac63 /* TriangleApp.mm */; };
-		246cd2f0cb1c43677ece71ae /* ImageApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71fc31075165cfab0b3cf8ee /* ImageApp.mm */; };
-		27a862d478af45e4ceed1b6e /* MyAppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9d72247cca22d4bc4b743aab /* MyAppViewController.mm */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		31eb65020afd43eb9bb9110d /* SquareAppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = f774603582f14839ec94720d /* SquareAppViewController.mm */; };
-		332a20e07fee542c03b49c8c /* ImageAppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = c0311397df47c8d95320d150 /* ImageAppViewController.mm */; };
 		5326AEA810A23A0500278DE6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5326AEA710A23A0500278DE6 /* CoreLocation.framework */; };
 		53F323EB10A20EDB00E0DAE4 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */; };
 		678E130817951530005B6D19 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130717951530005B6D19 /* Icon@2x.png */; };
@@ -22,7 +18,6 @@
 		678E130C1795153C005B6D19 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130B1795153C005B6D19 /* Default.png */; };
 		678E130E17951540005B6D19 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130D17951540005B6D19 /* Default@2x.png */; };
 		678E131017951549005B6D19 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130F17951549005B6D19 /* Default-568h@2x~iphone.png */; };
-		6e463de882372a0c94e26f83 /* CircleAppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = d6e099cc42bfd340c5443385 /* CircleAppViewController.mm */; };
 		BB16EBD20F2B2A9500518274 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD10F2B2A9500518274 /* OpenGLES.framework */; };
 		BB16EBD90F2B2AB500518274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD80F2B2AB500518274 /* QuartzCore.framework */; };
 		BBE5EAB80F49AD8400F28951 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */; };
@@ -36,7 +31,6 @@
 		D996352817F94EF300BEAFFE /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D996351F17F94EF300BEAFFE /* SVProgressHUD.bundle */; };
 		D996352A17F9568F00BEAFFE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D996352917F9568F00BEAFFE /* MediaPlayer.framework */; };
 		D996352D17FA103100BEAFFE /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D996352C17FA103100BEAFFE /* MainStoryboard_iPad.storyboard */; };
-		D9E1BD8517B9AD3000EAF3C3 /* LaunchAppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D9E1BD8417B9AD3000EAF3C3 /* LaunchAppViewController.mm */; };
 		E41D3ED713B38FB500A75A5D /* Project.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E41D3ED613B38FB500A75A5D /* Project.xcconfig */; };
 		E41D3EE613B3906D00A75A5D /* CoreOF.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = E41D3EE513B3906D00A75A5D /* CoreOF.xcconfig */; };
 		E41D400B13B39D2100A75A5D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E41D400613B39D2100A75A5D /* AVFoundation.framework */; };
@@ -47,9 +41,7 @@
 		E4A823A412561BE3002F86A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A823A312561BE3002F86A2 /* CoreGraphics.framework */; };
 		E4D8936E11527B74007E1F53 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4D8936B11527B74007E1F53 /* main.mm */; };
 		E4D8936F11527B74007E1F53 /* testApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4D8936D11527B74007E1F53 /* testApp.mm */; };
-		a174c6d42676e95effe6cf97 /* CircleApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = c6fb3183fe800241a844e5b8 /* CircleApp.mm */; };
 		a55613c24c4db9a6dc49d772 /* MyAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8627beb34192f6eb415db55d /* MyAppDelegate.mm */; };
-		df485cdc1f163264b57d1f8f /* SquareApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = cc2d7e64d3607df56d90a48c /* SquareApp.mm */; };
 		eb3f29c0ac4a650781ebce6f /* TriangleAppViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = af53838286224473cb38ba4e /* TriangleAppViewController.mm */; };
 /* End PBXBuildFile section */
 
@@ -76,11 +68,8 @@
 		1D6058910D05DD3D006BFB54 /* iosNativeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosNativeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		2ff2f6fcbd2c5f44b78526d1 /* ImageApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ImageApp.h; path = src/Apps/ImageApp.h; sourceTree = SOURCE_ROOT; };
 		32CA4F630368D1EE00C91783 /* ofxiOS_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxiOS_Prefix.pch; sourceTree = "<group>"; };
 		3342984c510e960b5253ae78 /* MyAppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MyAppDelegate.h; path = src/UI/MyAppDelegate.h; sourceTree = SOURCE_ROOT; };
-		49dc6aa509ee56fd1cd4fd2c /* SquareAppViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SquareAppViewController.h; path = src/AppViewControllers/SquareAppViewController.h; sourceTree = SOURCE_ROOT; };
-		4e2f89308412dde555dee1a4 /* SquareApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = SquareApp.h; path = src/Apps/SquareApp.h; sourceTree = SOURCE_ROOT; };
 		5326AEA710A23A0500278DE6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		53F323EA10A20EDB00E0DAE4 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		678E130717951530005B6D19 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "bin/data/Icon@2x.png"; sourceTree = "<group>"; };
@@ -88,12 +77,8 @@
 		678E130B1795153C005B6D19 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = bin/data/Default.png; sourceTree = "<group>"; };
 		678E130D17951540005B6D19 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "bin/data/Default@2x.png"; sourceTree = "<group>"; };
 		678E130F17951549005B6D19 /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x~iphone.png"; path = "bin/data/Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
-		71fc31075165cfab0b3cf8ee /* ImageApp.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ImageApp.mm; path = src/Apps/ImageApp.mm; sourceTree = SOURCE_ROOT; };
 		7b37e7ad9be78df8cc98c9f3 /* TriangleApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TriangleApp.h; path = src/Apps/TriangleApp.h; sourceTree = SOURCE_ROOT; };
 		8627beb34192f6eb415db55d /* MyAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = MyAppDelegate.mm; path = src/UI/MyAppDelegate.mm; sourceTree = SOURCE_ROOT; };
-		88f12646afb7384dd5ab6fdd /* CircleApp.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CircleApp.h; path = src/Apps/CircleApp.h; sourceTree = SOURCE_ROOT; };
-		9802791eb3f75fe36c55d369 /* MyAppViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MyAppViewController.h; path = src/UI/MyAppViewController.h; sourceTree = SOURCE_ROOT; };
-		9d72247cca22d4bc4b743aab /* MyAppViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = MyAppViewController.mm; path = src/UI/MyAppViewController.mm; sourceTree = SOURCE_ROOT; };
 		BB16EBD10F2B2A9500518274 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BB16EBD80F2B2AB500518274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BB24DDC910DA781C00E9C588 /* ofxiOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ofxiOS-Info.plist"; sourceTree = "<group>"; };
@@ -113,8 +98,6 @@
 		D996352017F94EF300BEAFFE /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
 		D996352917F9568F00BEAFFE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		D996352C17FA103100BEAFFE /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		D9E1BD8317B9AD3000EAF3C3 /* LaunchAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaunchAppViewController.h; path = AppViewControllers/LaunchAppViewController.h; sourceTree = "<group>"; };
-		D9E1BD8417B9AD3000EAF3C3 /* LaunchAppViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LaunchAppViewController.mm; path = AppViewControllers/LaunchAppViewController.mm; sourceTree = "<group>"; };
 		E41D3ED613B38FB500A75A5D /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		E41D3EE513B3906D00A75A5D /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../../../libs/openFrameworksCompiled/project/ios/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
 		E41D400613B39D2100A75A5D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -128,13 +111,6 @@
 		E4D8936D11527B74007E1F53 /* testApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = testApp.mm; path = src/testApp.mm; sourceTree = SOURCE_ROOT; };
 		aa892328d6aaa57fabf50342 /* TriangleAppViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TriangleAppViewController.h; path = src/AppViewControllers/TriangleAppViewController.h; sourceTree = SOURCE_ROOT; };
 		af53838286224473cb38ba4e /* TriangleAppViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = TriangleAppViewController.mm; path = src/AppViewControllers/TriangleAppViewController.mm; sourceTree = SOURCE_ROOT; };
-		c0311397df47c8d95320d150 /* ImageAppViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = ImageAppViewController.mm; path = src/AppViewControllers/ImageAppViewController.mm; sourceTree = SOURCE_ROOT; };
-		c6fb3183fe800241a844e5b8 /* CircleApp.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = CircleApp.mm; path = src/Apps/CircleApp.mm; sourceTree = SOURCE_ROOT; };
-		cc2d7e64d3607df56d90a48c /* SquareApp.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = SquareApp.mm; path = src/Apps/SquareApp.mm; sourceTree = SOURCE_ROOT; };
-		d6e099cc42bfd340c5443385 /* CircleAppViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = CircleAppViewController.mm; path = src/AppViewControllers/CircleAppViewController.mm; sourceTree = SOURCE_ROOT; };
-		e535d7be9896bbe12719af28 /* ImageAppViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ImageAppViewController.h; path = src/AppViewControllers/ImageAppViewController.h; sourceTree = SOURCE_ROOT; };
-		e82e754d65a932f2df8b1a0f /* CircleAppViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = CircleAppViewController.h; path = src/AppViewControllers/CircleAppViewController.h; sourceTree = SOURCE_ROOT; };
-		f774603582f14839ec94720d /* SquareAppViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 30; name = SquareAppViewController.mm; path = src/AppViewControllers/SquareAppViewController.mm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,16 +185,10 @@
 		93f84dd1123fb4b01e0b3b30 /* AppViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D9E1BD8317B9AD3000EAF3C3 /* LaunchAppViewController.h */,
-				D9E1BD8417B9AD3000EAF3C3 /* LaunchAppViewController.mm */,
-				e535d7be9896bbe12719af28 /* ImageAppViewController.h */,
-				e82e754d65a932f2df8b1a0f /* CircleAppViewController.h */,
-				49dc6aa509ee56fd1cd4fd2c /* SquareAppViewController.h */,
-				af53838286224473cb38ba4e /* TriangleAppViewController.mm */,
+				7b37e7ad9be78df8cc98c9f3 /* TriangleApp.h */,
+				03541b492cf4ac16398eac63 /* TriangleApp.mm */,
 				aa892328d6aaa57fabf50342 /* TriangleAppViewController.h */,
-				d6e099cc42bfd340c5443385 /* CircleAppViewController.mm */,
-				c0311397df47c8d95320d150 /* ImageAppViewController.mm */,
-				f774603582f14839ec94720d /* SquareAppViewController.mm */,
+				af53838286224473cb38ba4e /* TriangleAppViewController.mm */,
 			);
 			name = AppViewControllers;
 			sourceTree = "<group>";
@@ -315,7 +285,6 @@
 				E4D8936D11527B74007E1F53 /* testApp.mm */,
 				E4D8936C11527B74007E1F53 /* testApp.h */,
 				93f84dd1123fb4b01e0b3b30 /* AppViewControllers */,
-				d1cfea8461b96256b1b8c57d /* Apps */,
 				bb265ea4218a70dc0c63e479 /* UI */,
 			);
 			path = src;
@@ -324,27 +293,10 @@
 		bb265ea4218a70dc0c63e479 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9802791eb3f75fe36c55d369 /* MyAppViewController.h */,
-				9d72247cca22d4bc4b743aab /* MyAppViewController.mm */,
 				8627beb34192f6eb415db55d /* MyAppDelegate.mm */,
 				3342984c510e960b5253ae78 /* MyAppDelegate.h */,
 			);
 			name = UI;
-			sourceTree = "<group>";
-		};
-		d1cfea8461b96256b1b8c57d /* Apps */ = {
-			isa = PBXGroup;
-			children = (
-				88f12646afb7384dd5ab6fdd /* CircleApp.h */,
-				03541b492cf4ac16398eac63 /* TriangleApp.mm */,
-				2ff2f6fcbd2c5f44b78526d1 /* ImageApp.h */,
-				4e2f89308412dde555dee1a4 /* SquareApp.h */,
-				c6fb3183fe800241a844e5b8 /* CircleApp.mm */,
-				cc2d7e64d3607df56d90a48c /* SquareApp.mm */,
-				71fc31075165cfab0b3cf8ee /* ImageApp.mm */,
-				7b37e7ad9be78df8cc98c9f3 /* TriangleApp.h */,
-			);
-			name = Apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,16 +413,8 @@
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
 				E4D8936F11527B74007E1F53 /* testApp.mm in Sources */,
 				eb3f29c0ac4a650781ebce6f /* TriangleAppViewController.mm in Sources */,
-				6e463de882372a0c94e26f83 /* CircleAppViewController.mm in Sources */,
-				332a20e07fee542c03b49c8c /* ImageAppViewController.mm in Sources */,
-				31eb65020afd43eb9bb9110d /* SquareAppViewController.mm in Sources */,
 				1e06a14544b806ba3bd9b07d /* TriangleApp.mm in Sources */,
-				a174c6d42676e95effe6cf97 /* CircleApp.mm in Sources */,
-				df485cdc1f163264b57d1f8f /* SquareApp.mm in Sources */,
-				246cd2f0cb1c43677ece71ae /* ImageApp.mm in Sources */,
-				27a862d478af45e4ceed1b6e /* MyAppViewController.mm in Sources */,
 				a55613c24c4db9a6dc49d772 /* MyAppDelegate.mm in Sources */,
-				D9E1BD8517B9AD3000EAF3C3 /* LaunchAppViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
