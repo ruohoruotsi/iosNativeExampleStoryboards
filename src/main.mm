@@ -1,5 +1,5 @@
 #include "ofMain.h"
-#include "SquareApp.h"
+#include "TriangleApp.h"    // to support legacy stuff in the else clause below. IOHAVOC remove.
 
 int main(){
 
@@ -32,6 +32,6 @@ int main(){
          **/
         
         ofSetupOpenGL(1024,768, OF_FULLSCREEN);
-        ofRunApp(new SquareApp());
+        ofRunApp(new TriangleApp());
     }
 }
