@@ -21,6 +21,7 @@
 		BB16EBD20F2B2A9500518274 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD10F2B2A9500518274 /* OpenGLES.framework */; };
 		BB16EBD90F2B2AB500518274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD80F2B2AB500518274 /* QuartzCore.framework */; };
 		BBE5EAB80F49AD8400F28951 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */; };
+		D9375D9A1803758400A73762 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9375D981803758400A73762 /* Particle.cpp */; };
 		D996352117F94EF300BEAFFE /* DPMusicControllerStatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D996351317F94EF300BEAFFE /* DPMusicControllerStatic.framework */; };
 		D996352217F94EF300BEAFFE /* BeamMusicPlayerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D996351517F94EF300BEAFFE /* BeamMusicPlayerController.bundle */; };
 		D996352317F94EF300BEAFFE /* BeamMusicPlayerViewController.nib in Resources */ = {isa = PBXBuildFile; fileRef = D996351617F94EF300BEAFFE /* BeamMusicPlayerViewController.nib */; };
@@ -83,6 +84,8 @@
 		BB16EBD80F2B2AB500518274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BB24DDC910DA781C00E9C588 /* ofxiOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ofxiOS-Info.plist"; sourceTree = "<group>"; };
 		BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D9375D981803758400A73762 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Particle.cpp; path = Apps/Particle.cpp; sourceTree = "<group>"; };
+		D9375D991803758400A73762 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Particle.h; path = Apps/Particle.h; sourceTree = "<group>"; };
 		D996351317F94EF300BEAFFE /* DPMusicControllerStatic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DPMusicControllerStatic.framework; sourceTree = "<group>"; };
 		D996351517F94EF300BEAFFE /* BeamMusicPlayerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BeamMusicPlayerController.bundle; sourceTree = "<group>"; };
 		D996351617F94EF300BEAFFE /* BeamMusicPlayerViewController.nib */ = {isa = PBXFileReference; lastKnownFileType = file; path = BeamMusicPlayerViewController.nib; sourceTree = "<group>"; };
@@ -151,8 +154,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				D996352B17F9E9E500BEAFFE /* Resources */,
 				E4D8936A11527B74007E1F53 /* src */,
+				D996352B17F9E9E500BEAFFE /* Resources */,
 				BB24E1F710DAA51900E9C588 /* openFrameworks */,
 				BB16F26B0F2B646B00518274 /* addons */,
 				BB16E9930F2B1E5900518274 /* libs */,
@@ -182,15 +185,15 @@
 			name = "core frameworks";
 			sourceTree = "<group>";
 		};
-		93f84dd1123fb4b01e0b3b30 /* AppViewControllers */ = {
+		93f84dd1123fb4b01e0b3b30 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
+				D9375D991803758400A73762 /* Particle.h */,
+				D9375D981803758400A73762 /* Particle.cpp */,
 				7b37e7ad9be78df8cc98c9f3 /* TriangleApp.h */,
 				03541b492cf4ac16398eac63 /* TriangleApp.mm */,
-				aa892328d6aaa57fabf50342 /* TriangleAppViewController.h */,
-				af53838286224473cb38ba4e /* TriangleAppViewController.mm */,
 			);
-			name = AppViewControllers;
+			name = Apps;
 			sourceTree = "<group>";
 		};
 		BB16E9930F2B1E5900518274 /* libs */ = {
@@ -227,6 +230,15 @@
 				29B97323FDCFA39411CA2CEA /* core frameworks */,
 			);
 			name = core;
+			sourceTree = "<group>";
+		};
+		D9375D971803422300A73762 /* AppViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				aa892328d6aaa57fabf50342 /* TriangleAppViewController.h */,
+				af53838286224473cb38ba4e /* TriangleAppViewController.mm */,
+			);
+			name = AppViewControllers;
 			sourceTree = "<group>";
 		};
 		D996351217F94EF300BEAFFE /* DPMusicControllerStatic.embeddedframework */ = {
@@ -282,9 +294,10 @@
 			isa = PBXGroup;
 			children = (
 				E4D8936B11527B74007E1F53 /* main.mm */,
-				E4D8936D11527B74007E1F53 /* testApp.mm */,
 				E4D8936C11527B74007E1F53 /* testApp.h */,
-				93f84dd1123fb4b01e0b3b30 /* AppViewControllers */,
+				E4D8936D11527B74007E1F53 /* testApp.mm */,
+				D9375D971803422300A73762 /* AppViewControllers */,
+				93f84dd1123fb4b01e0b3b30 /* Apps */,
 				bb265ea4218a70dc0c63e479 /* UI */,
 			);
 			path = src;
@@ -415,6 +428,7 @@
 				eb3f29c0ac4a650781ebce6f /* TriangleAppViewController.mm in Sources */,
 				1e06a14544b806ba3bd9b07d /* TriangleApp.mm in Sources */,
 				a55613c24c4db9a6dc49d772 /* MyAppDelegate.mm in Sources */,
+				D9375D9A1803758400A73762 /* Particle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

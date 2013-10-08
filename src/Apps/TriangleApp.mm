@@ -11,41 +11,98 @@ TriangleApp :: ~TriangleApp () {
 }
 
 //--------------------------------------------------------------
-void TriangleApp::setup() {	
-	ofBackground(127);
+void TriangleApp::setup() {
     
-    int fontSize = 8;
-    if (ofxiOSGetOFWindow()->isRetinaSupportedOnDevice())
-        fontSize *= 2;
+    ofSetVerticalSync(true);
+    ofEnableAlphaBlending();
+    ofSetCircleResolution(100);
+    ofEnableSmoothing();
     
-    font.loadFont("fonts/mono0755.ttf", fontSize);
+    ofSetFullscreen(true);
 }
 
 //--------------------------------------------------------------
 void TriangleApp::update(){
 
+    float xorig = ofGetWidth()*0.5;
+	float yorig = ofGetHeight()*0.5;
+	
+	for (int i = 0; i < TOTAL_PARTICLES; i++)
+    {
+		float radius = 50 + i * 20;
+		float angle = ofGetElapsedTimef() * (1 + i / 20.0);
+        
+		float x = xorig + radius * cos(angle* ofMap(ofGetMouseX(),0,ofGetScreenWidth(),0.0,1.0));
+		float y = yorig + radius * -sin(angle* ofMap(ofGetMouseY(),0,ofGetScreenHeight(),0.0,1.0));
+		
+		particles[i].moveTo(x,y);
+	}
+    
+    ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
 //--------------------------------------------------------------
 void TriangleApp::draw() {
-    int a = MIN(ofGetWidth(), ofGetHeight()) * 0.3;
-    int b = sqrt( a * a + a * a );
-    int x = ofGetWidth()  * 0.5;
-    int y = ofGetHeight() * 0.5;
-    int p = 0;
+
+    ofBackground(0);
     
-	ofSetColor(ofColor::red);
-    ofTriangle(x, y - a, x + b, y + b, x - b, y + b);
+    float sinSwitcher = abs(sin(ofGetElapsedTimef()*0.1));
     
-    x = ofGetWidth()  * 0.2;
-    y = ofGetHeight() * 0.11;
-    p = ofGetHeight() * 0.035;
+    if (!ofGetMousePressed()){
+        drawParticlesLine((1.0-sinSwitcher)*0.8);
+    }
     
-    ofSetColor(ofColor::white);
-    font.drawString("frame num      = " + ofToString( ofGetFrameNum() ),    x, y+=p);
-    font.drawString("frame rate     = " + ofToString( ofGetFrameRate() ),   x, y+=p);
-    font.drawString("screen width   = " + ofToString( ofGetWidth() ),       x, y+=p);
-    font.drawString("screen height  = " + ofToString( ofGetHeight() ),      x, y+=p);
+    for (int i = 0; i < TOTAL_PARTICLES; i++)
+    {
+        if (!ofGetMousePressed())
+        {
+            particles[i].drawTrail(sinSwitcher*0.5);
+        }
+        
+        int closest = 10000;
+        for ( int j = 0; j < TOTAL_PARTICLES; j++)
+        {
+            if (i != j)
+            {
+                int dist = particles[i].distance(particles[j]);
+                
+                if (dist < closest){
+                    closest = dist;
+                }
+                
+                if ((dist < 100) && ofGetMousePressed()){
+                    ofSetColor(255, ofMap(closest,0,100,100,0,true) );
+                    ofLine(particles[i], particles[j]);
+                }
+            }
+        }
+        
+        particles[i].drawDot( ofMap(closest,0,100,1.0,0.0,true) );
+    }
+}
+
+//--------------------------------------------------------------
+void TriangleApp::drawParticlesLine(float _alpha)
+{
+    ofPolyline macroLine;
+    macroLine.addVertex(particles[0]);
+    for (int i = 0 ; i < TOTAL_PARTICLES ; i++)
+    {
+        macroLine.curveTo(particles[i]);
+    }
+    macroLine.curveTo(particles[TOTAL_PARTICLES-1]);
+    macroLine = macroLine.getResampledByCount( 1000 );
+    
+    ofSetColor(255);
+    ofMesh lineMesh;
+    lineMesh.setMode(OF_PRIMITIVE_LINE_STRIP);
+    for (int i = 0 ; i < macroLine.getVertices().size() ; i++)
+    {
+        lineMesh.addColor(ofFloatColor(1.0, _alpha));
+        lineMesh.addVertex(macroLine.getVertices()[i]);
+    }
+    ofSetColor(255);
+    lineMesh.draw();
 }
 
 //--------------------------------------------------------------

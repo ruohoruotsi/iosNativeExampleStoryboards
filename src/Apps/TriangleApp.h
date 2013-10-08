@@ -4,6 +4,11 @@
 #include "ofxiOS.h"
 #include "ofxiOSExtras.h"
 
+#include "Particle.h"
+
+#define TOTAL_PARTICLES 50
+
+
 class TriangleApp : public ofxiOSApp {
 	
 public:
@@ -27,7 +32,10 @@ public:
 	void gotMemoryWarning();
 	void deviceOrientationChanged(int newOrientation);
 
-    ofTrueTypeFont font;
+    void drawParticlesLine(float _alpha);
+    
+    ofSoundPlayer       song;
+    Particle           particles[TOTAL_PARTICLES];
 };
 
 
