@@ -1,9 +1,9 @@
 //
-//  MyAppDelegate.m
+//  AppDelegate.m
 //  Created by lukasz karluk on 12/12/11.
 //
 
-#import "MyAppDelegate.h"
+#import "AppDelegate.h"
 
 #import "TriangleAppViewController.h"
 #import "TriangleApp.h"
@@ -15,7 +15,7 @@
 
 
 
-@implementation MyAppDelegate
+@implementation AppDelegate
 
 // @synthesize navigationController;
 

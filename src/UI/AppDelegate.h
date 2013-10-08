@@ -1,5 +1,5 @@
 //
-//  MyAppDelegate.h
+//  AppDelegate.h
 //  Created by lukasz karluk on 12/12/11.
 //
 
@@ -10,7 +10,7 @@
 @class MMDrawerController;
 
 
-@interface MyAppDelegate : ofxiOSAppDelegate  <UITabBarControllerDelegate>
+@interface AppDelegate : ofxiOSAppDelegate  <UITabBarControllerDelegate>
 {
     //
 }
